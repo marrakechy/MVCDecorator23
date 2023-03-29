@@ -1,13 +1,15 @@
 public class EncryptedMessage extends MessageDecorator {
 	private int key;
+	private Message m;
 	public EncryptedMessage(Message m, int key) {
 		super(m);
+		this.m = m;
 		this.key = key;
 	}
 
 	@Override
-	public String getMessage() {
-		return encrypt(m.getMessage());
+	public String getTheMsg() {
+		return encrypt(m.getTheMsg());
 	}
 
 	private String encrypt(String msg){

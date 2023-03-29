@@ -1,11 +1,13 @@
 public class BinaryMessage extends MessageDecorator {
+	private Message m;
 	public BinaryMessage(Message m) {
 		super(m);
+		this.m = m;
 	}
 
 	@Override
-	public String getMessage() {
-		return encode(m.getMessage());
+	public String getTheMsg() {
+		return encode(m.getTheMsg());
 	}
 
 	private String encode(String msg){
