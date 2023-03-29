@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="374dfa56-3b70-498c-9ad0-ae5c14e5a21f" name="Changes" comment="">
+    <list default="true" id="374dfa56-3b70-498c-9ad0-ae5c14e5a21f" name="Changes" comment="Update for class">
+      <change afterPath="$PROJECT_DIR$/src/MessageModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AngryMessageDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AngryMessageDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinaryMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EncryptedMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EncryptedMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessageDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SMSDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SMSDecorator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +62,14 @@
       <option name="presentableId" value="Default" />
       <updated>1679941323137</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update for class">
+      <created>1680113509657</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680113509657</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -79,6 +82,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update for class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update for class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
