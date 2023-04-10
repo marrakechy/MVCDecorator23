@@ -1,60 +1,24 @@
-public class MessageModel {
+class MessageModel {
 
-    private String base;
-    private Message m;
+    private String message;
     private boolean angry;
-    private boolean sms;
     private boolean binary;
     private boolean encrypted;
+    private boolean sms;
 
     public static final int ANGRY = 1;
     public static final int BINARY = 2;
-    public static final int SMS = 3;
-    public static final int ENCRYPTED  = 4;
-
+    public static final int ENCRYPTED = 3;
+    public static final int SMS = 4;
 
     public MessageModel() {
-        base = "";
-        m = new Message(base);
-
-        angry = false;
-        sms = false;
-        binary = false;
-        encrypted = false;
+        message = "";
     }
 
-    public String getMessage() {
-        m = new Message (base);
-        decorate();
-        return m.getTheMsg();
-    }
-
-    public void setMessage(String s) {
-        base = s;
-    }
-
-    private void decorate(){
-
-        if (angry){
-            m = new AngryMessageDecorator(m);
-        }
-        if (sms){
-            m = new SMSDecorator(m);
-        }
-        if (encrypted){
-            m = new EncryptedMessage(m,5);
-        }
-        if (binary){
-            m = new BinaryMessage(m);
-        }
-    }
-    public void toggle(int state){
-        switch (state){
+    public void toggle(int state) {
+        switch (state) {
             case ANGRY:
                 angry = !angry;
-                break;
-            case SMS:
-                sms = !sms;
                 break;
             case BINARY:
                 binary = !binary;
@@ -62,7 +26,56 @@ public class MessageModel {
             case ENCRYPTED:
                 encrypted = !encrypted;
                 break;
+            case SMS:
+                sms = !sms;
+                break;
+            default:
+                break;
+        }
+    }
+
+    public boolean isAngry() {
+        return angry;
+    }
+
+    public boolean isBinary() {
+        return binary;
+    }
+
+    public boolean isEncrypted() {
+        return encrypted;
+    }
+
+    public boolean isSms() {
+        return sms;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getDecoratedMessage() {
+        String decorated = message;
+
+        if (angry) {
+            decorated = new AngryMessageDecorator(new Message(decorated)).getTheMsg();
+        }
+        if (binary) {
+            decorated = new BinaryMessage(new Message(decorated)).getTheMsg();
+        }
+        if (encrypted) {
+            decorated = new EncryptedMessage(new Message(decorated), 5).getTheMsg();
+        }
+        if (sms) {
+            decorated = new SMSDecorator(new Message(decorated)).getTheMsg();
         }
 
+        return decorated;
+    }
+
+    public static String getMessage() {
+        System.out.print("Enter a message: ");
+        String message = scanner.nextLine();
+        return message;
     }
 }
